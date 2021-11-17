@@ -125,3 +125,60 @@ void print_list(List l) {
             printf("Le prix du produit : %f ]\n", a->prixP);
         }
 }
+
+int compter(List l){
+    if (is_empty(l)==TRUE){
+        return(0);
+    }
+    else{
+        return(compter(l->next)+1);
+    }
+}
+
+int nb_occurence(List l, int c){
+    if (is_empty(l)==TRUE){
+        return(0);
+    }
+    else{
+        if(l->codeP==c){
+            return(nb_occurence(l->next,c)+1);
+        }
+        else {
+            return(nb_occurence(l->next,c));
+        }
+    }
+}
+
+List effacer (List l){
+    List a=l;
+    if (is_empty(l)==FALSE){
+        while (l->next !=NULL) {
+            l->codeP=0;
+            l->quantP=0;
+            l->prixP=0;
+            l=l->next;
+        }
+        l->codeP=0;
+        l->quantP=0;
+        l->prixP=0;
+    }
+    return(a);
+}
+
+int code_produit_i_aux(List l, int i, int n){
+    if (is_empty(l)){
+        return(-1); //-1 donc problème car pas d'élément ou on a fait toute la liste
+    }
+    else {
+        if (n==i){
+            return(l->codeP);
+        }
+        else{
+            return (code_produit_i_aux(l->next,i,n+1));
+        }
+    }
+}
+
+int code_produit_i(List l, int i){
+    return(code_produit_i_aux(l,i,1));
+}

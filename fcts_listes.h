@@ -37,4 +37,14 @@ List research(List l, int c);
 
 void print_list(List l);
 
+int compter(List l);
+
+int nb_occurence(List l, int c);
+
+List effacer (List l);
+
+int code_produit_i_aux(List l, int i, int n);
+
+int code_produit_i(List l, int i);
+
 #endif //LISTE_FCTS_LISTES_H
