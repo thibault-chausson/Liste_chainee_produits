@@ -3,4 +3,4 @@ project(Liste C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Liste main.c fcts_listes.h fcts_listes.c)
+add_executable(Liste main.c fcts_listes.h fcts_listes.c main_pour_utilisateur.c)

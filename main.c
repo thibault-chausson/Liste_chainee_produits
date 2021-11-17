@@ -1,5 +1,6 @@
 #include "fcts_listes.h"
 
+/*
 main() {
     //Produit 1
     int c1= 100;
@@ -85,4 +86,4 @@ main() {
 
     printf("\n");
 
-}
+}*/
