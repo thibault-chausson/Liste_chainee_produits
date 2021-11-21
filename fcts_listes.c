@@ -5,7 +5,7 @@
 #include "fcts_listes.h"
 
 BOOL is_empty(List l){
-    if (l==NULL) /*Si l pointe sur vide ca veut dire que la liste chainée est vide*/ {
+    if (l==NULL) /*Si l pointe sur vide cela veut dire que la liste chainée est vide*/ {
         return TRUE;
     }
     else {
@@ -15,8 +15,8 @@ BOOL is_empty(List l){
 
 List insert_head(List l, int c, int q, float p) {
     List new_produit; //On crée la liste
-    new_produit=(produit *) malloc(sizeof(produit)); //On lui affecte une taille
-    new_produit->codeP=c; //On complète toutes les informations necessaires
+    new_produit=(produit *) malloc(sizeof(produit)); //On lui affecte un espace mémoire
+    new_produit->codeP=c; //On complète toutes les informations nécessaires
     new_produit->quantP=q;
     new_produit->prixP=p;
     new_produit->next=l;
@@ -36,7 +36,7 @@ List insert_tail(List l, int c, int q, float p) {
     }
     else {
         a = l;
-        while (a->next !=NULL) /*On va jusqu'a la fin est on le met à la fin*/{
+        while (a->next !=NULL) /*On va jusqu'à la fin est on le met à la fin*/{
             a=a->next;
         }
         a->next=new_produit;
@@ -91,7 +91,7 @@ List research(List l, int c){
 }
 
 void print_list(List l) {
-        if( is_empty(l) ) /*Si la listez est vide on l'affiche*/ {
+        if( is_empty(l) ) /*Si la liste est vide on l'affiche*/ {
         printf(" *** EMPTY LIST *** \n");
         }
 
@@ -99,7 +99,7 @@ void print_list(List l) {
 
             List a=l;
 
-            while (a->next !=NULL) /*On avance et on affiche chaque caractère*/ {
+            while (a->next !=NULL) /*On avance et on affiche chaque caractéristique*/ {
                 printf("[Le code produit : %d, ", a->codeP);
                 printf("La quantité du produit en stock : %d, ", a->quantP);
                 printf("Le prix du produit : %f ]\n", a->prixP);
@@ -154,10 +154,10 @@ List effacer (List l){
 
 int code_produit_i_aux(List l, int i, int n){
     if (is_empty(l)){
-        return(-1); //-1 donc problème car pas d'élément ou on a fait toute la liste
+        return(-1); //-1 car on n'a pas trouvé l'élément
     }
     else {
-        if (n==i)/*Si on trouve lélément on renvoie cet élément*/{
+        if (n==i)/*Si on trouve l'élément on renvoie cet élément*/{
             return(l->codeP);
         }
         else{

@@ -61,7 +61,7 @@ main(){
                 printf("Nombre éléments dans la liste : %d\n",compter(p));
                 break;
             case 7:
-                printf("Quel est le code du produit à compter le nb d'occurence ?\n");
+                printf("Quel est le code du produit à compter le nombre d'occurence ?\n");
                 scanf("%d",&ele);
                 printf("Nombre d'occurence de l'éléments %d dans la liste : %d\n",ele,nb_occurence(p,ele));
                 break;
@@ -71,13 +71,13 @@ main(){
             case 9:
                 printf("Quel est la position de l'élément cherché ?\n");
                 scanf("%d",&i);
-                printf("Le %d ème element est : %d\n", i, code_produit_i(p,i));
+                printf("Le %d ème élément est : %d\n", i, code_produit_i(p,i));
                 break;
             case 10:
                 print_list(p);
                 break;
             default: //S'il demande une action non référencée
-                printf("commande non référencé");
+                printf("Commande non référencé");
         }
         printf("Voulez-vous continuer o/n?\n");
         scanf("%s",&cont);
