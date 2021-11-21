@@ -13,6 +13,7 @@ main(){
     float p1;
     int ele;
     int i;
+    //On affiche l'ensemble des actions possible
     printf("Que voulez-vous faire ?\n");
     printf("1 : inserer un élément en tête\n");
     printf("2 : inserer un élément en queue\n");
@@ -24,7 +25,7 @@ main(){
     printf("8 : vider liste\n");
     printf("9 : code produit du ième\n");
     printf("10 : afficher\n");
-    while(cont=='o'){
+    while(cont=='o')/*Pour savoir si on continue en fonction de la réponse de l'utilisateur*/{
         scanf("%d",&n);
         switch (n) {
             case 1:
@@ -75,7 +76,7 @@ main(){
             case 10:
                 print_list(p);
                 break;
-            default:
+            default: //S'il demande une action non référencée
                 printf("commande non référencé");
         }
         printf("Voulez-vous continuer o/n?\n");
